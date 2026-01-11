@@ -1,0 +1,10 @@
+#hero {
+  margin-top: 40px;
+  background: url(../images/Hero\ Image.png) center;
+  background-size: cover;
+  height: 584px;
+
+  .container {
+    padding: 112px 80px !important;
+  }
+}

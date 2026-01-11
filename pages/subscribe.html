@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coffeeroasters</title>
+
+    <!-- external libraries -->
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- favicon -->
+    <link rel="icon" href="../favicon.ico" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
+  <body>
+    <!-- main container of the page -->
+    <div class="main container p-0">
+      <!-- header -->
+      <header>
+        <nav class="navbar navbar-expand-lg p-0 position-relative">
+          <div class="container-fluid flex-nowrap p-0">
+            <!-- logo -->
+            <a
+              class="navbar-brand p-0 d-flex align-content-center"
+              href="../home.html"
+            >
+              <img
+                class="d-none d-md-flex"
+                src="../images/Logo.png"
+                alt="logo image"
+              />
+
+              <img
+                class="d-flex d-md-none"
+                src="../images/LogoMobile.png"
+                alt=""
+              />
+            </a>
+
+            <!-- navbar -->
+
+            <div class="navbar-nav d-none d-md-flex p-0">
+              <a class="nav-link p-0" aria-current="page" href="../home.html"
+                >Home</a
+              >
+              <a class="nav-link p-0" href="../pages/about.html"> ABOUT US </a>
+
+              <a
+                class="btn p-0 border-0 active"
+                data-bs-toggle="collapse"
+                href="#headerCollapse"
+                role="button"
+                aria-expanded="false"
+                aria-controls="headerCollapse"
+              >
+                Create your plan <i class="fa-solid fa-caret-down"></i>
+              </a>
+              <div
+                class="collapse position-absolute top-100 end-0"
+                id="headerCollapse"
+              >
+                <div class="card card-body border-0 bg-light p-2">
+                  <a
+                    class="nav-link p-1 rounded active"
+                    aria-current="page"
+                    href="../pages/subscribe.html"
+                    >Default</a
+                  >
+                  <a
+                    class="nav-link p-1 rounded"
+                    href="../pages/SubscribeCompleted.html"
+                    >Completed</a
+                  >
+                  <a
+                    class="nav-link p-1 rounded"
+                    href="../pages/SubscribeIncomplete.html"
+                    >Incomplete</a
+                  >
+                  <a
+                    class="nav-link p-1 rounded"
+                    href="../pages/SubscribeModal.html"
+                    >Modal</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- collapse of mobile  -->
+            <a
+              class="btn p-0 d-flex d-md-none border-0"
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              <img src="../images/Combined Shape 2.png" alt="" />
+            </a>
+            <div
+              class="collapse position-absolute top-100 end-0 mt-3 z-3"
+              id="collapseExample"
+            >
+              <div class="card card-body border-0 bg-light p-2">
+                <a
+                  class="nav-link p-1 rounded"
+                  aria-current="page"
+                  href="../home.html"
+                  >Home</a
+                >
+                <a class="nav-link p-1 rounded" href="../pages/about.html"
+                  >ABOUT US</a
+                >
+                <a
+                  class="btn p-1 border-0 active"
+                  data-bs-toggle="collapse"
+                  href="#collapseCollapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseCollapse"
+                >
+                  Create your plan
+                </a>
+                <div
+                  class="collapse position-absolute top-100 end-0 z-3"
+                  id="collapseCollapse"
+                >
+                  <div class="card card-body border-0 bg-light p-2">
+                    <a
+                      class="nav-link p-1 rounded active"
+                      aria-current="page"
+                      href="../pages/subscribe.html"
+                      >Default</a
+                    >
+                    <a
+                      class="nav-link p-1 rounded"
+                      href="../pages/SubscribeCompleted.html"
+                      >Completed</a
+                    >
+                    <a
+                      class="nav-link p-1 rounded"
+                      href="../pages/SubscribeIncomplete.html"
+                      >Incomplete</a
+                    >
+                    <a
+                      class="nav-link p-1 rounded"
+                      href="../pages/SubscribeModal.html"
+                      >Modal</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- footer -->
+      <footer class="d-flex flex-column flex-md-row align-items-center">
+        <!-- logo -->
+        <a href="../home.html">
+          <img
+            class="d-none d-lg-flex"
+            src="../images/Footer Logo.png"
+            alt=""
+          />
+          <img
+            class="d-flex d-lg-none"
+            src="../images/Footer Logo tablet&mobile.png"
+            alt=""
+          />
+        </a>
+
+        <!-- navigation -->
+        <div
+          class="nav navbar-expand-lg d-flex justify-content-between position-relative"
+        >
+          <a class="nav-link" href="../home.html">Home</a>
+          <a class="nav-link" href="../pages/about.html">ABOUT US</a>
+          <a
+            class="btn p-0 border-0 active"
+            data-bs-toggle="collapse"
+            href="#footerCollapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="footerCollapse"
+          >
+            Create your plan <i class="fa-solid fa-caret-up"></i>
+          </a>
+          <div
+            class="collapse position-absolute top-100 end-0"
+            id="footerCollapse"
+          >
+            <div class="card card-body border-0 bg-light p-2">
+              <a
+                class="nav-link p-1 rounded active"
+                aria-current="page"
+                href="../pages/subscribe.html"
+                >Default</a
+              >
+              <a
+                class="nav-link p-1 rounded"
+                href="../pages/SubscribeCompleted.html"
+                >Completed</a
+              >
+              <a
+                class="nav-link p-1 rounded"
+                href="../pages/SubscribeIncomplete.html"
+                >Incomplete</a
+              >
+              <a
+                class="nav-link p-1 rounded"
+                href="../pages/SubscribeModal.html"
+                >Modal</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- social media -->
+        <div class="social navbar-expand-lg d-flex justify-content-between">
+          <a
+            class="nav-link"
+            aria-current="page"
+            href="https://www.facebook.com/mahmoud.khaled.725652?locale=ar_AR"
+            target="_blank"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a
+            class="nav-link twitter"
+            href="https://x.com/Mahmoud246DC"
+            target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            class="nav-link"
+            href="http://instagram.com/mahmoud_khaled747/"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
