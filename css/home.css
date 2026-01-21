@@ -1,10 +1,203 @@
+/* hero section */
 #hero {
   margin-top: 40px;
   background: url(../images/Hero\ Image.png) center;
   background-size: cover;
-  height: 584px;
 
-  .container {
-    padding: 112px 80px !important;
+  @media screen and (max-width: 992px) {
+    background-image: url(../images/heroImageTablet.png);
+    background-size: cover;
+    background-position: right;
+  }
+
+  /* mobile design */
+  @media screen and (max-width: 767px) {
+    margin-top: 31.8px;
+  }
+
+  .row {
+    padding: clamp(96px, 8vw, 112px) clamp(24px, 5.6vw, 80px);
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      @media screen and (max-width: 767px) {
+        visibility: visible;
+      }
+    }
+
+    .content {
+      z-index: 10;
+      h1 {
+        font-family: Fraunces;
+        font-weight: 900;
+        font-size: clamp(40px, 6.5vw, 76px);
+        line-height: 100%;
+        letter-spacing: 0px;
+      }
+
+      p {
+        margin-top: 24px;
+        font-family: Barlow;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0px;
+        color: #fefcf7;
+        opacity: 0.8;
+      }
+
+      button {
+        margin-top: clamp(24px, 4.5vw, 32px);
+      }
+    }
+  }
+
+  margin-bottom: 140px;
+
+  /* tablet and mobile */
+  @media screen and (max-width: 992px) {
+    margin-bottom: 80px;
+  }
+}
+
+/* collection section */
+
+#collection {
+  padding: 0px 80px;
+
+  @media screen and (max-width: 992px) {
+    padding: 0px;
+  }
+
+  .collection-wrap {
+    .top {
+      position: relative;
+      text-align: center;
+      margin-bottom: -65.719px;
+
+      /* tablet design */
+      @media screen and (max-width: 992px) {
+        margin-bottom: -72px;
+      }
+      /* mobile design */
+      @media screen and (max-width: 767px) {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-family: Fraunces;
+        font-weight: 900;
+        font-size: 182px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        color: #83888f;
+        margin: 0;
+        /* tablet design */
+        @media screen and (max-width: 992px) {
+          font-family: Fraunces;
+          font-weight: 900;
+          font-size: 112px;
+          line-height: 100%;
+          letter-spacing: 0px;
+          text-align: center;
+        }
+        /* mobile design */
+        @media screen and (max-width: 767px) {
+          font-family: Fraunces;
+          font-weight: 900;
+          font-size: 40px;
+          line-height: 100%;
+          letter-spacing: 0px;
+          text-align: center;
+        }
+      }
+
+      .collection-overlay {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .bottom {
+      gap: 32px;
+
+      .col {
+        .card {
+          gap: 48px;
+
+          /* tablet design */
+          @media screen and (max-width: 992px) {
+            gap: 0;
+          }
+          /* mobile design */
+          @media screen and (max-width: 767px) {
+            gap: 24px;
+          }
+
+          img {
+            width: 253.5px;
+            height: 193px;
+          }
+
+          .card-body {
+            gap: 24px;
+            padding: 0;
+
+            /* tablet design */
+            @media screen and (max-width: 992px) {
+              padding: 40.5px 32px;
+              padding-right: 118.5px;
+            }
+
+            /* tablet design */
+            @media screen and (max-width: 767px) {
+              padding: 0;
+              gap: 16px;
+            }
+
+            h5 {
+              font-family: Fraunces;
+              font-weight: 900;
+              font-size: 24px;
+              line-height: 150%;
+              letter-spacing: 0px;
+              color: #333d4b;
+              text-align: center;
+              margin: 0;
+              /* tablet design */
+              @media screen and (min-width: 768px) and (max-width: 992px) {
+                text-align: start;
+              }
+            }
+
+            p {
+              font-family: Barlow;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 160%;
+              letter-spacing: 0px;
+              color: #333d4b;
+              text-align: center;
+              /* tablet design */
+              @media screen and (min-width: 768px) and (max-width: 992px) {
+                text-align: start;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
