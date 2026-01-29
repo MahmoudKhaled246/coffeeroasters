@@ -6,9 +6,18 @@
   box-sizing: border-box;
 }
 
-/* .cta {
-
-} */
+.cta {
+  background-color: #0e8784;
+  border: 0;
+  font-family: Fraunces;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #fefcf7;
+  padding: 16px 32px;
+}
 
 /* the main wrapper of website */
 .main {
