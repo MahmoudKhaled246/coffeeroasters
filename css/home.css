@@ -59,13 +59,7 @@
       }
     }
   }
-
-  margin-bottom: 140px;
-
-  /* tablet and mobile */
-  @media screen and (max-width: 992px) {
-    margin-bottom: 80px;
-  }
+  margin-bottom: clamp(80px, calc(58.873px + 5.634vw), 140px);
 }
 
 /* collection section */
@@ -200,14 +194,10 @@
     }
   }
 
-  margin-bottom: 140px;
-
-  /* tablet and mobile */
-  @media screen and (max-width: 992px) {
-    margin-bottom: 80px;
-  }
+  margin-bottom: clamp(80px, calc(58.873px + 5.634vw), 140px);
 }
 
+/* insights section */
 #insights {
   .top {
     background-color: #333d4b;
@@ -343,5 +333,113 @@
         }
       }
     }
+  }
+
+  margin-bottom: clamp(80px, calc(58.873px + 5.634vw), 140px);
+}
+
+/* service section */
+#service {
+  padding: 0px 85px;
+  /* tablet design */
+  @media screen and (max-width: 992px) {
+    padding: 0;
+  }
+
+  .bigger-row {
+    margin: 0;
+    padding-right: 63px;
+    @media screen and (max-width: 992px) {
+      padding: 0;
+    }
+    .container {
+      padding: 0;
+
+      /* mobile design */
+      @media screen and (max-width: 767px) {
+        text-align: center;
+      }
+      .start-text {
+        margin-bottom: 80px;
+        @media screen and (max-width: 767px) {
+          margin-bottom: 64px;
+        }
+        font-family: Fraunces;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: #83888f;
+      }
+
+      img {
+        margin-bottom: 80px;
+      }
+
+      .smaller-row {
+        margin: 0;
+        gap: 96px;
+        margin-bottom: 64px;
+        /* tablet design */
+        @media screen and (max-width: 992px) {
+          gap: 20px;
+        }
+        /* mobile design */
+        @media screen and (max-width: 767px) {
+          gap: 40px;
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .col {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          gap: 40px;
+          /* mobile design */
+          @media screen and (max-width: 767px) {
+            gap: 24px;
+          }
+
+          h2 {
+            margin: 0;
+            font-family: Fraunces;
+            font-weight: 900;
+            font-size: 72px;
+            line-height: 100%;
+            letter-spacing: 0px;
+            color: #fdd6ba;
+          }
+          h3 {
+            margin: 0;
+            font-family: Fraunces;
+            font-weight: 900;
+            font-size: 35px;
+            line-height: 113.99999999999999%;
+            letter-spacing: 0px;
+            color: #333d4b;
+          }
+          p {
+            margin: 0;
+            font-family: Barlow;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0px;
+            color: #333d4b;
+          }
+        }
+      }
+    }
+  }
+
+  margin-bottom: 140px;
+
+  /* tablet design */
+  @media screen and (max-width: 992px) {
+    margin-bottom: 80px;
   }
 }
