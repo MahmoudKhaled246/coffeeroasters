@@ -1,4 +1,4 @@
-/* hero section */
+/* start hero section */
 #hero {
   margin-top: 40px;
   background: url(../images/Hero\ Image.png) center;
@@ -61,8 +61,9 @@
   }
   margin-bottom: clamp(80px, calc(58.873px + 5.634vw), 140px);
 }
+/* end hero section */
 
-/* collection section */
+/* start collection section */
 #collection {
   padding: 0px 80px;
 
@@ -196,8 +197,9 @@
 
   margin-bottom: clamp(80px, calc(58.873px + 5.634vw), 140px);
 }
+/* end collection section */
 
-/* insights section */
+/* start insights section */
 #insights {
   .top {
     background-color: #333d4b;
@@ -337,8 +339,9 @@
 
   margin-bottom: clamp(80px, calc(58.873px + 5.634vw), 140px);
 }
+/* end insights section */
 
-/* service section */
+/* start service section */
 #service {
   padding: 0px 85px;
   /* tablet design */
@@ -443,3 +446,4 @@
     margin-bottom: 80px;
   }
 }
+/* end service section */
