@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -37,13 +37,14 @@
     <link rel="icon" href="../favicon.ico" />
 
     <!-- my css -->
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/subscribe.css" />
     <link rel="stylesheet" href="../css/shared.css" />
   </head>
+
   <body>
     <!-- main container of the page -->
     <div class="main container p-0">
-      <!-- header -->
+      <!-- start header -->
       <header>
         <nav class="navbar navbar-expand-lg p-0 position-relative">
           <div class="container-fluid flex-nowrap p-0">
@@ -103,11 +104,6 @@
                     class="nav-link p-1 rounded active"
                     href="../pages/SubscribeIncomplete.html"
                     >Incomplete</a
-                  >
-                  <a
-                    class="nav-link p-1 rounded"
-                    href="../pages/SubscribeModal.html"
-                    >Modal</a
                   >
                 </div>
               </div>
@@ -169,11 +165,6 @@
                       href="../pages/SubscribeIncomplete.html"
                       >Incomplete</a
                     >
-                    <a
-                      class="nav-link p-1 rounded"
-                      href="../pages/SubscribeModal.html"
-                      >Modal</a
-                    >
                   </div>
                 </div>
               </div>
@@ -181,8 +172,389 @@
           </div>
         </nav>
       </header>
+      <!-- end header -->
 
-      <!-- footer -->
+      <!-- start hero section -->
+      <section class="container-fluid" id="hero">
+        <h1>Create plan</h1>
+        <p>
+          Coffee the way you wanted it to be. For coffee delivered tomorrow, or
+          next week. For whatever brew method you use. For choice, for
+          convenience, for quality.
+        </p>
+      </section>
+      <!-- end hero section -->
+
+      <!-- start services section -->
+      <section class="container-fluid" id="service">
+        <picture class="d-none d-md-flex">
+          <source
+            media="(min-width: 992px)"
+            srcset="../images/Step-Indicators-subs.png"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="../images/Step-Indicators-tablet.png"
+          />
+          <img src="../images/Step-Indicators-subs.png" alt="" />
+        </picture>
+        <div class="row g-0">
+          <div class="col">
+            <h2>01</h2>
+            <h3>Pick your coffee</h3>
+            <p>
+              Select from our evolving range of artisan coffees. Our beans are
+              ethically sourced and we pay fair prices for them. There are new
+              coffees in all profiles every month for you to try out.
+            </p>
+          </div>
+          <div class="col">
+            <h2>02</h2>
+            <h3>Choose the frequency</h3>
+            <p>
+              Customize your order frequency, quantity, even your roast style
+              and grind type. Pause, skip or cancel your subscription with no
+              commitment through our online portal.
+            </p>
+          </div>
+          <div class="col">
+            <h2>03</h2>
+            <h3>Receive and enjoy!</h3>
+            <p>
+              We ship your package within 48 hours, freshly roasted. Sit back
+              and enjoy award-winning world-class coffees curated to provide a
+              distinct tasting experience.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- end services section -->
+
+      <!-- start order section -->
+      <section class="container-fluid" id="order">
+        <div class="row g-0 w-100 flex-wrap flex-lg-nowrap">
+          <div class="left">
+            <ul class="list-group">
+              <li class="list-group-item rounded-0 first">
+                <a
+                  href="#collapseOne"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  <span class="number">01</span>
+                  Preferences
+                </a>
+              </li>
+              <li class="list-group-item rounded-0">
+                <a
+                  href="#collapseTwo"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  class="collapsed"
+                >
+                  <span class="number">02</span>
+                  Bean Type
+                </a>
+              </li>
+              <li class="list-group-item rounded-0">
+                <a
+                  href="#collapseThree"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  class="collapsed"
+                >
+                  <span class="number">03</span>
+                  Quantity
+                </a>
+              </li>
+              <li class="list-group-item rounded-0">
+                <a
+                  href="#collapseFour"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  class="collapsed"
+                >
+                  <span class="number">04</span>
+                  Grind Option
+                </a>
+              </li>
+              <li class="list-group-item rounded-0 last">
+                <a
+                  href="#collapseFive"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  class="collapsed"
+                >
+                  <span class="number">05</span>
+                  Deliveries
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="right">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    How do you drink your coffee?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <div class="row w-100 g-0">
+                      <div class="col rounded-4 btn text-start complete">
+                        <h3>Capsule</h3>
+                        <p>
+                          Compatible with Nespresso systems and similar brewers
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Filter</h3>
+                        <p>
+                          For pour over or drip methods like Aeropress, Chemex,
+                          and V60
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Espresso</h3>
+                        <p>
+                          Dense and finely ground beans for an intense,
+                          flavorful experience
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    What type of coffee?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="row w-100 g-0">
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Single Origin</h3>
+                        <p>
+                          Distinct, high quality coffee from a specific
+                          family-owned farm
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Decaf</h3>
+                        <p>
+                          Just like regular coffee, except the caffeine has been
+                          removed
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Blended</h3>
+                        <p>
+                          Combination of two or three dark roasted beans of
+                          organic coffees
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    How much would you like?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="row w-100 g-0">
+                      <div class="col rounded-4 btn text-start">
+                        <h3>250g</h3>
+                        <p>
+                          Perfect for the solo drinker. Yields about 12
+                          delicious cups.
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>500g</h3>
+                        <p>
+                          Perfect option for a couple. Yields about 40
+                          delectable cups.
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>1000g</h3>
+                        <p>
+                          Perfect for offices and events. Yields about 90
+                          delightful cups.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Want us to grind them?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="row w-100 g-0">
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Wholebean</h3>
+                        <p>
+                          Best choice if you cherish the full sensory experience
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Filter</h3>
+                        <p>
+                          For drip or pour-over coffee methods such as V60 or
+                          Aeropress
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Cafetiére</h3>
+                        <p>
+                          Course ground beans specially suited for french press
+                          coffee
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    How often should we deliver?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="row w-100 g-0">
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Every week</h3>
+                        <p>
+                          $7.20 per shipment. Includes free first-class
+                          shipping.
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Every 2 weeks</h3>
+                        <p>
+                          $9.60 per shipment. Includes free priority shipping.
+                        </p>
+                      </div>
+                      <div class="col rounded-4 btn text-start">
+                        <h3>Every month</h3>
+                        <p>
+                          $12.00 per shipment. Includes free priority shipping.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="summary">
+              <h4>Order Summary</h4>
+              <p>
+                “I drink my coffee using <span class="filled">Capsules</span>,
+                with a <span class="filled">_____</span> type of bean.
+                <span class="filled">_____</span> , sent to me
+                <span class="filled">_____</span>.”
+              </p>
+            </div>
+            <button
+              class="btn cta"
+              data-bs-toggle="modal"
+              data-bs-target="#SubscribeModal"
+            >
+              Create your plan
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="SubscribeModal"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title" id="staticBackdropLabel">
+                    Order Summary
+                  </h1>
+                </div>
+                <div class="modal-body">
+                  <p class="order-summary">
+                    “I drink my coffee as <span>Filter</span>, with a
+                    <span>Decaf</span> type of bean. <span>250g</span> ground
+                    ala <span>Cafetiére</span>, sent to me
+                    <span>Every Week</span>.”
+                  </p>
+                  <p class="make-sure">
+                    Is this correct? You can proceed to checkout or go back to
+                    plan selection if something is off. Subscription discount
+                    codes can also be redeemed at the checkout.
+                  </p>
+                  <div
+                    class="container d-flex flex-column flex-md-row justify-content-between p-0 align-items-baseline"
+                  >
+                    <p class="price">$14.00/ mo</p>
+                    <button class="btn cta" data-bs-dismiss="modal">
+                      Checkout
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end order section -->
+
+      <!-- start footer -->
       <footer class="d-flex flex-column flex-md-row align-items-center">
         <!-- logo -->
         <a href="../home.html">
@@ -235,11 +607,6 @@
                 href="../pages/SubscribeIncomplete.html"
                 >Incomplete</a
               >
-              <a
-                class="nav-link p-1 rounded"
-                href="../pages/SubscribeModal.html"
-                >Modal</a
-              >
             </div>
           </div>
         </div>
@@ -267,6 +634,7 @@
           ></a>
         </div>
       </footer>
+      <!-- start footer -->
     </div>
   </body>
 </html>

@@ -54,7 +54,7 @@
         opacity: 0.8;
       }
 
-      button {
+      a {
         margin-top: clamp(24px, 4.5vw, 32px);
       }
     }
