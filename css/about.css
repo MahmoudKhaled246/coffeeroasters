@@ -212,7 +212,7 @@
       margin-bottom: 40px;
       /* mobile design */
       @media screen and (max-width: 767px) {
-        margin-bottom: 32px;
+        margin: 0px auto 32px;
       }
     }
     h2 {
