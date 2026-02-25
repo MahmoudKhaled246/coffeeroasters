@@ -9,6 +9,32 @@ body {
   background-color: #fefcf7;
 }
 
+body {
+  --sb-track-color: #fefcf7;
+  --sb-thumb-color: #0e8784;
+  --sb-size: 15px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
 h1,
 h2,
 h3,
@@ -30,12 +56,20 @@ p {
   text-align: center;
   color: #fefcf7;
   padding: 16px 32px;
+  transition: all ease 0.7s;
+
+  &:hover {
+    color: #fefcf7;
+    background-color: #66d2cf;
+  }
 }
 
 /* the main wrapper of website */
 .main {
+  /* overflow: hidden; */
   width: 1280px;
   margin-top: 40px;
+
   margin-bottom: 40px;
 
   /* tablet design */
@@ -53,79 +87,124 @@ p {
 
 /* header */
 header {
+  z-index: 567890;
   .navbar {
-    .navbar-nav {
-      display: flex;
-      flex-direction: row;
-      gap: 33px;
+    padding: 0;
 
-      #headerCollapse {
-        .card {
-          .active {
-            color: white;
-            background-color: #333d4b;
+    .container-fluid {
+      padding: 0;
+      align-items: baseline;
+
+      .navbar-brand {
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar-toggler {
+        /* تثبيت سلوك زر الهامبورجر ضد hover opacity بتاع المكتبة */
+        &.hamburger,
+        &.hamburger:hover,
+        &.hamburger:focus,
+        &.hamburger:active,
+        &.hamburger:focus-visible {
+          padding: 0 !important;
+          opacity: 1 !important;
+        }
+
+        &:focus,
+        &:active,
+        &:focus-visible {
+          outline: none !important;
+          box-shadow: none !important;
+        }
+
+        /* المقاس */
+        .hamburger-box {
+          width: 16px !important;
+          height: 15px !important;
+          display: block;
+        }
+
+        /* شكل الخطوط */
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+          width: 16px !important;
+          height: 3px !important;
+          border-radius: 1.5px !important;
+          background-color: #333d4b !important;
+        }
+
+        /* المسافات = 3px (±6) */
+        .hamburger-inner::before {
+          top: -6px !important;
+        }
+        .hamburger-inner::after {
+          top: 6px !important;
+        }
+
+        /* وقت الـ X: نجمعهم للمنتصف (المكتبة تكمل rotate) */
+        &.is-active {
+          .hamburger-inner::before {
+            top: 0 !important;
           }
-          a {
-            &:hover {
-              background-color: #333d4b;
-              color: white;
-            }
+          .hamburger-inner::after {
+            top: 0 !important;
           }
         }
       }
 
-      a {
-        font-family: Barlow;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 130%;
-        letter-spacing: 0.92px;
-        text-transform: uppercase;
-        color: #83888f;
-        transition: all ease 0.5s;
+      .navbar-collapse {
+        justify-content: flex-end;
 
-        &:hover {
-          color: #333d4b;
-        }
-      }
-      .active {
-        color: #333d4b;
-      }
-    }
+        .navbar-nav {
+          gap: 33px;
 
-    #collapseExample {
-      .card {
-        a {
-          font-family: Barlow;
-          font-weight: 700;
-          font-size: 12px;
-          line-height: 130%;
-          letter-spacing: 0.92px;
-          text-transform: uppercase;
-          color: #83888f;
-          padding: 10px;
-        }
+          @media screen and (max-width: 767px) {
+            margin: 80px 42px 54px;
+            gap: 32px;
+          }
 
-        .active {
-          background-color: #333d4b;
-          color: white;
-        }
-
-        #collapseCollapse {
-          card {
+          #headerCollapse {
             a {
-              font-family: Barlow;
-              font-weight: 700;
-              font-size: 12px;
-              line-height: 130%;
-              letter-spacing: 0.92px;
-              text-transform: uppercase;
-              color: #83888f;
+              text-decoration: none;
+              &.active,
+              &:hover {
+                background-color: #333d4b;
+                color: #fefcf7;
+                text-decoration: none;
+              }
             }
+          }
 
-            .active {
-              color: white;
-              background-color: #333d4b;
+          a {
+            text-decoration: underline transparent 4px solid;
+            transition: ease all 0.7s;
+            &.active,
+            &:hover {
+              color: #333d4b;
+              text-decoration-color: #0e8784;
+            }
+            padding: 0;
+            font-family: Barlow;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 130%;
+            letter-spacing: 0.92px;
+            text-transform: uppercase;
+            color: #83888f;
+            @media screen and (max-width: 767px) {
+              &.active {
+                color: #0e8784;
+                text-decoration: underline #0e8784 4px solid;
+              }
+              font-family: Fraunces;
+              font-weight: 900;
+              font-size: 24px;
+              line-height: 32px;
+              text-align: center;
+              color: #333d4b;
+              text-transform: capitalize;
             }
           }
         }
@@ -249,5 +328,41 @@ footer {
     .twitter {
       height: 19.5px;
     }
+  }
+}
+
+/* ----------------------------------------------
+  Generated by AnimatiSS
+  Licensed under FreeBSD License
+  URL: https://xsgames.co/animatiss
+  Twitter: @xsgames_
+---------------------------------------------- */
+
+.jello-horizontal {
+  &:hover {
+    animation: jello-horizontal 0.6s linear both;
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
   }
 }

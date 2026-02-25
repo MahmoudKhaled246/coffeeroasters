@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>coffeeroasters</title>
 
-    <!-- external libraries -->
-
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -29,14 +27,22 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- favicon -->
+    <link rel="icon" href="./favicon.ico" />
+
+    <!-- external libraries -->
+    <link rel="stylesheet" href="./css/hamburgers.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://csshake.surge.sh/csshake.min.css"
+    />
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- favicon -->
-    <link rel="icon" href="./favicon.ico" />
-
     <!-- my css -->
+
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/shared.css" />
   </head>
@@ -45,110 +51,53 @@
     <div class="main container p-0">
       <!-- start header -->
       <header>
-        <nav class="navbar navbar-expand-lg p-0 position-relative">
-          <div class="container-fluid flex-nowrap p-0">
-            <!-- logo -->
-            <a
-              class="navbar-brand p-0 d-flex align-content-center"
-              href="./home.html"
-            >
-              <img
-                class="d-none d-md-flex"
-                src="./images/Logo.png"
-                alt="logo image"
-              />
-
-              <img
-                class="d-flex d-md-none"
-                src="./images/LogoMobile.png"
-                alt=""
-              />
-            </a>
-
-            <!-- navbar -->
-
-            <div class="navbar-nav d-none d-md-flex p-0">
-              <a
-                class="nav-link p-0 active"
-                aria-current="page"
-                href="./home.html"
-                >Home</a
-              >
-              <a class="nav-link p-0" href="./pages/about.html"> ABOUT US </a>
-
-              <a
-                class="btn p-0 border-0"
-                data-bs-toggle="collapse"
-                href="#headerCollapse"
-                role="button"
-                aria-expanded="false"
-                aria-controls="headerCollapse"
-              >
-                Create your plan <i class="fa-solid fa-caret-down"></i>
-              </a>
-              <div
-                class="collapse position-absolute top-100 end-0"
-                id="headerCollapse"
-              >
-                <div class="card card-body border-0 bg-light p-2">
-                  <a
-                    class="nav-link p-1 rounded"
-                    aria-current="page"
-                    href="./pages/subscribe.html"
-                    >Default</a
-                  >
-                  <a
-                    class="nav-link p-1 rounded"
-                    href="./pages/SubscribeCompleted.html"
-                    >Completed</a
-                  >
-                  <a
-                    class="nav-link p-1 rounded"
-                    href="./pages/SubscribeIncomplete.html"
-                    >Incomplete</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- collapse of mobile  -->
-            <a
-              class="btn p-0 d-flex d-md-none border-0"
+        <nav class="navbar navbar-expand-md">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="./home.html"
+              ><picture>
+                <source media="(min-width: 992px)" srcset="./images/Logo.svg" />
+                <source media="(min-width: 768px)" srcset="./images/Logo.svg" />
+                <img
+                  src="./images/Logo-mobile.svg"
+                  alt="Our commitment"
+                /> </picture
+            ></a>
+            <button
+              class="hamburger hamburger--squeeze navbar-toggler border-0"
+              type="button"
               data-bs-toggle="collapse"
-              href="#collapseExample"
-              role="button"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-label="Toggle navigation"
             >
-              <img src="./images/Combined Shape 2.png" alt="" />
-            </a>
-            <div
-              class="collapse position-absolute top-100 end-0 mt-3 z-3"
-              id="collapseExample"
-            >
-              <div class="card card-body border-0 bg-light p-2">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav position-relative">
                 <a
-                  class="nav-link p-1 rounded active"
+                  class="nav-link active"
                   aria-current="page"
                   href="./home.html"
                   >Home</a
                 >
-                <a class="nav-link p-1 rounded" href="./pages/about.html"
-                  >ABOUT US</a
-                >
+                <a class="nav-link" href="./pages/about.html"> About us </a>
+
                 <a
-                  class="btn p-1 border-0"
+                  class="btn border-0"
                   data-bs-toggle="collapse"
-                  href="#collapseCollapse"
+                  href="#headerCollapse"
                   role="button"
                   aria-expanded="false"
-                  aria-controls="collapseCollapse"
+                  aria-controls="headerCollapse"
                 >
-                  Create your plan
+                  Create your plan <i class="fa-solid fa-caret-down"></i>
                 </a>
                 <div
                   class="collapse position-absolute top-100 end-0 z-3"
-                  id="collapseCollapse"
+                  id="headerCollapse"
                 >
                   <div class="card card-body border-0 bg-light p-2">
                     <a
@@ -175,9 +124,13 @@
         </nav>
       </header>
       <!-- end header -->
-
       <!-- start hero section -->
-      <section class="container rounded-4" id="hero">
+      <section
+        class="container rounded-4"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        id="hero"
+      >
         <div class="row d-flex justify-content-start align-content-center">
           <div class="content col-12 col-md-9 col-lg-6">
             <h1 class="text-white">Great coffee made simple.</h1>
@@ -186,7 +139,7 @@
               expertly curated artisan coffees from our best roasters delivered
               directly to your door, at your schedule.
             </p>
-            <a class="btn cta" href="./pages/subscribe.html"
+            <a class="btn cta jello-horizontal" href="./pages/subscribe.html"
               >Create your plan</a
             >
           </div>
@@ -198,14 +151,23 @@
       <!-- start collection section -->
       <section class="container d-flex justify-content-center" id="collection">
         <div class="col-12 collection-wrap">
-          <div class="row top text-center">
+          <div
+            class="row top text-center"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <h2>our collection</h2>
             <div class="collection-overlay">
               <img src="./images/gradient overlay.png" alt="" />
             </div>
           </div>
           <div class="row bottom d-flex flex-column flex-lg-row gx-0">
-            <div class="col">
+            <div
+              class="col shake-slow"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="500"
+            >
               <div
                 class="card border-0 bg-transparent d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-center"
               >
@@ -220,7 +182,12 @@
               </div>
             </div>
 
-            <div class="col">
+            <div
+              class="col shake-slow"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="800"
+            >
               <div
                 class="card border-0 bg-transparent d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-center"
               >
@@ -234,7 +201,12 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div
+              class="col shake-slow"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="1100"
+            >
               <div
                 class="card border-0 bg-transparent d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-center"
               >
@@ -248,7 +220,12 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div
+              class="col shake-slow"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="1300"
+            >
               <div
                 class="card border-0 bg-transparent d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-center"
               >
@@ -272,9 +249,9 @@
         class="container p-0 d-flex justify-content-center align-items-center flex-column"
         id="insights"
       >
-        <div class="row top w-100">
-          <h3>Why choose us?</h3>
-          <p>
+        <div class="row top w-100" data-aos="fade-up" data-aos-duration="1500">
+          <h3 data-aos="fade-right" data-aos-duration="1500">Why choose us?</h3>
+          <p data-aos="fade-left" data-aos-duration="1500">
             A large part of our role is choosing which particular coffees will
             be featured in our range. This means working closely with the best
             coffee growers to give you a more impactful experience on every
@@ -282,11 +259,16 @@
           </p>
         </div>
         <div class="row bottom d-flex w-100">
-          <div class="card-wrap col-12 col-lg">
+          <div
+            class="card-wrap col-12 col-lg shake-trigger"
+            data-aos="flip-left"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
             <div class="card flex-md-row flex-lg-column">
               <img
-                src="./images/Coffee Bean Icon.png"
-                class="card-img-top Coffee"
+                src="./images/Coffee Bean Icon.svg"
+                class="card-img-top Coffee shake-constant shake-slow shake-constant--hover"
                 alt="..."
               />
               <div class="card-body">
@@ -298,11 +280,16 @@
               </div>
             </div>
           </div>
-          <div class="card-wrap col-12 col-lg">
+          <div
+            class="card-wrap col-12 col-lg shake-trigger"
+            data-aos="flip-left"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
             <div class="card flex-md-row flex-lg-column">
               <img
-                src="./images/Gift Icon.png"
-                class="card-img-top Gift"
+                src="./images/Gift Icon.svg"
+                class="card-img-top Gift shake-constant shake-slow shake-constant--hover"
                 alt="..."
               />
               <div class="card-body">
@@ -314,11 +301,16 @@
               </div>
             </div>
           </div>
-          <div class="card-wrap col-12 col-lg">
+          <div
+            class="card-wrap col-12 col-lg shake-trigger"
+            data-aos="flip-left"
+            data-aos-duration="1500"
+            data-aos-delay="800"
+          >
             <div class="card flex-md-row flex-lg-column">
               <img
-                src="./images/Truck Icon.png"
-                class="card-img-top truck"
+                src="./images/Truck Icon.svg"
+                class="card-img-top truck shake-constant shake-slow shake-constant--hover"
                 alt="..."
               />
               <div class="card-body">
@@ -338,19 +330,40 @@
       <section class="container" id="service">
         <div class="row bigger-row">
           <div class="container">
-            <p class="start-text">How it works</p>
-            <img
-              class="d-none d-lg-flex"
-              src="./images/How It Works Steps.png"
-              alt="easterEgg"
-            />
-            <img
-              class="d-none d-md-flex d-lg-none"
-              src="./images/How It Works Steps tablet.png"
-              alt="easterEggss"
-            />
+            <p
+              class="start-text"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              How it works
+            </p>
+
+            <picture class="d-none d-md-flex">
+              <source
+                media="(min-width: 992px)"
+                srcset="./images/How-It-Works-Steps.png"
+              />
+
+              <source
+                media="(min-width: 768px) and (max-width: 991.98px)"
+                srcset="./images/How-It-Works-Steps-tablet.png"
+              />
+
+              <img
+                src="./images/How-It-Works-Steps.png"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="500"
+                alt=""
+              />
+            </picture>
             <div class="row smaller-row">
-              <div class="col">
+              <div
+                class="col"
+                data-aos="flip-right"
+                data-aos-duration="1500"
+                data-aos-delay="500"
+              >
                 <h2>01</h2>
                 <h3>Pick your coffee</h3>
                 <p>
@@ -360,7 +373,12 @@
                   out.
                 </p>
               </div>
-              <div class="col">
+              <div
+                class="col"
+                data-aos="flip-right"
+                data-aos-duration="1500"
+                data-aos-delay="800"
+              >
                 <h2>02</h2>
                 <h3>Choose the frequency</h3>
                 <p>
@@ -369,7 +387,12 @@
                   with no commitment through our online portal.
                 </p>
               </div>
-              <div class="col">
+              <div
+                class="col"
+                data-aos="flip-right"
+                data-aos-duration="1500"
+                data-aos-delay="1000"
+              >
                 <h2>03</h2>
                 <h3>Receive and enjoy!</h3>
                 <p>
@@ -379,7 +402,7 @@
                 </p>
               </div>
             </div>
-            <a class="btn cta" href="./pages/subscribe.html"
+            <a class="btn cta jello-horizontal" href="./pages/subscribe.html"
               >Create your plan</a
             >
           </div>
@@ -390,14 +413,21 @@
       <!-- start footer -->
       <footer class="d-flex flex-column flex-md-row align-items-center">
         <!-- logo -->
-        <a href="./home.html">
-          <img class="d-none d-lg-flex" src="./images/Footer Logo.png" alt="" />
-          <img
-            class="d-flex d-lg-none"
-            src="./images/Footer Logo tablet&mobile.png"
-            alt=""
-          />
-        </a>
+        <a class="navbar-brand" href="./home.html"
+          ><picture>
+            <source
+              media="(min-width: 992px)"
+              srcset="./images/Footer Logo.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/Footer Logo tablet&mobile.svg"
+            />
+            <img
+              src="./images/Footer Logo tablet&mobile.svg"
+              alt="Our commitment"
+            /> </picture
+        ></a>
 
         <!-- navigation -->
         <div
@@ -465,5 +495,7 @@
       </footer>
       <!-- start footer -->
     </div>
+
+    <script src="./js/shared.js"></script>
   </body>
 </html>

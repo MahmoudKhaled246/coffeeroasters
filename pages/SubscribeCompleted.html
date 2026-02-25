@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>coffeeroasters</title>
 
-    <!-- external libraries -->
-
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -36,117 +34,68 @@
     <!-- favicon -->
     <link rel="icon" href="../favicon.ico" />
 
+    <!-- external libraries -->
+    <link rel="stylesheet" href="../css/hamburgers.min.css" />
+
     <!-- my css -->
     <link rel="stylesheet" href="../css/subscribe.css" />
     <link rel="stylesheet" href="../css/shared.css" />
   </head>
-
   <body>
     <!-- main container of the page -->
     <div class="main container p-0">
       <!-- start header -->
       <header>
-        <nav class="navbar navbar-expand-lg p-0 position-relative">
-          <div class="container-fluid flex-nowrap p-0">
-            <!-- logo -->
-            <a
-              class="navbar-brand p-0 d-flex align-content-center"
-              href="../home.html"
-            >
-              <img
-                class="d-none d-md-flex"
-                src="../images/Logo.png"
-                alt="logo image"
-              />
-
-              <img
-                class="d-flex d-md-none"
-                src="../images/LogoMobile.png"
-                alt=""
-              />
-            </a>
-
-            <!-- navbar -->
-
-            <div class="navbar-nav d-none d-md-flex p-0">
-              <a class="nav-link p-0" aria-current="page" href="../home.html"
-                >Home</a
-              >
-              <a class="nav-link p-0" href="../pages/about.html"> ABOUT US </a>
-
-              <a
-                class="btn p-0 border-0 active"
-                data-bs-toggle="collapse"
-                href="#headerCollapse"
-                role="button"
-                aria-expanded="false"
-                aria-controls="headerCollapse"
-              >
-                Create your plan <i class="fa-solid fa-caret-down"></i>
-              </a>
-              <div
-                class="collapse position-absolute top-100 end-0"
-                id="headerCollapse"
-              >
-                <div class="card card-body border-0 bg-light p-2">
-                  <a
-                    class="nav-link p-1 rounded"
-                    aria-current="page"
-                    href="../pages/subscribe.html"
-                    >Default</a
-                  >
-                  <a
-                    class="nav-link p-1 rounded active"
-                    href="../pages/SubscribeCompleted.html"
-                    >Completed</a
-                  >
-                  <a
-                    class="nav-link p-1 rounded"
-                    href="../pages/SubscribeIncomplete.html"
-                    >Incomplete</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- collapse of mobile  -->
-            <a
-              class="btn p-0 d-flex d-md-none border-0"
+        <nav class="navbar navbar-expand-md">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../home.html"
+              ><picture>
+                <source
+                  media="(min-width: 992px)"
+                  srcset="../images/Logo.svg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="../images/Logo.svg"
+                />
+                <img
+                  src="../images/Logo-mobile.svg"
+                  alt="Our commitment"
+                /> </picture
+            ></a>
+            <button
+              class="hamburger hamburger--squeeze navbar-toggler border-0"
+              type="button"
               data-bs-toggle="collapse"
-              href="#collapseExample"
-              role="button"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-label="Toggle navigation"
             >
-              <img src="../images/Combined Shape 2.png" alt="" />
-            </a>
-            <div
-              class="collapse position-absolute top-100 end-0 mt-3 z-3"
-              id="collapseExample"
-            >
-              <div class="card card-body border-0 bg-light p-2">
-                <a
-                  class="nav-link p-1 rounded"
-                  aria-current="page"
-                  href="../home.html"
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav position-relative">
+                <a class="nav-link" aria-current="page" href="../home.html"
                   >Home</a
                 >
-                <a class="nav-link p-1 rounded" href="../pages/about.html"
-                  >ABOUT US</a
-                >
+                <a class="nav-link" href="../pages/about.html"> About us </a>
+
                 <a
-                  class="btn p-1 border-0 active"
+                  class="btn border-0 active"
                   data-bs-toggle="collapse"
-                  href="#collapseCollapse"
+                  href="#headerCollapse"
                   role="button"
                   aria-expanded="false"
-                  aria-controls="collapseCollapse"
+                  aria-controls="headerCollapse"
                 >
-                  Create your plan
+                  Create your plan <i class="fa-solid fa-caret-down"></i>
                 </a>
                 <div
                   class="collapse position-absolute top-100 end-0 z-3"
-                  id="collapseCollapse"
+                  id="headerCollapse"
                 >
                   <div class="card card-body border-0 bg-light p-2">
                     <a
@@ -175,7 +124,12 @@
       <!-- end header -->
 
       <!-- start hero section -->
-      <section class="container-fluid" id="hero">
+      <section
+        class="container-fluid"
+        id="hero"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
         <h1>Create plan</h1>
         <p>
           Coffee the way you wanted it to be. For coffee delivered tomorrow, or
@@ -186,7 +140,12 @@
       <!-- end hero section -->
 
       <!-- start services section -->
-      <section class="container-fluid" id="service">
+      <section
+        class="container-fluid"
+        id="service"
+        data-aos="fade"
+        data-aos-duration="1500"
+      >
         <picture class="d-none d-md-flex">
           <source
             media="(min-width: 992px)"
@@ -196,10 +155,21 @@
             media="(min-width: 768px)"
             srcset="../images/Step-Indicators-tablet.png"
           />
-          <img src="../images/Step-Indicators-subs.png" alt="" />
+          <img
+            src="../images/Step-Indicators-subs.png"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+            alt=""
+          />
         </picture>
         <div class="row g-0">
-          <div class="col">
+          <div
+            class="col"
+            data-aos="flip-right"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
             <h2>01</h2>
             <h3>Pick your coffee</h3>
             <p>
@@ -208,7 +178,12 @@
               coffees in all profiles every month for you to try out.
             </p>
           </div>
-          <div class="col">
+          <div
+            class="col"
+            data-aos="flip-right"
+            data-aos-duration="1500"
+            data-aos-delay="700"
+          >
             <h2>02</h2>
             <h3>Choose the frequency</h3>
             <p>
@@ -217,7 +192,12 @@
               commitment through our online portal.
             </p>
           </div>
-          <div class="col">
+          <div
+            class="col"
+            data-aos="flip-right"
+            data-aos-duration="1500"
+            data-aos-delay="900"
+          >
             <h2>03</h2>
             <h3>Receive and enjoy!</h3>
             <p>
@@ -235,7 +215,12 @@
         <div class="row g-0 w-100 flex-wrap flex-lg-nowrap">
           <div class="left">
             <ul class="list-group">
-              <li class="list-group-item rounded-0 first">
+              <li
+                class="list-group-item rounded-0 first"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="400"
+              >
                 <a
                   href="#collapseOne"
                   data-bs-toggle="collapse"
@@ -245,7 +230,12 @@
                   Preferences
                 </a>
               </li>
-              <li class="list-group-item rounded-0">
+              <li
+                class="list-group-item rounded-0"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="600"
+              >
                 <a
                   href="#collapseTwo"
                   data-bs-toggle="collapse"
@@ -256,7 +246,12 @@
                   Bean Type
                 </a>
               </li>
-              <li class="list-group-item rounded-0">
+              <li
+                class="list-group-item rounded-0"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="800"
+              >
                 <a
                   href="#collapseThree"
                   data-bs-toggle="collapse"
@@ -267,7 +262,12 @@
                   Quantity
                 </a>
               </li>
-              <li class="list-group-item rounded-0">
+              <li
+                class="list-group-item rounded-0"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="1000"
+              >
                 <a
                   href="#collapseFour"
                   data-bs-toggle="collapse"
@@ -278,7 +278,12 @@
                   Grind Option
                 </a>
               </li>
-              <li class="list-group-item rounded-0 last">
+              <li
+                class="list-group-item rounded-0 last"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="1200"
+              >
                 <a
                   href="#collapseFive"
                   data-bs-toggle="collapse"
@@ -291,7 +296,7 @@
               </li>
             </ul>
           </div>
-          <div class="right">
+          <div class="right" data-aos="fade-left" data-aos-duration="1500">
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -505,7 +510,7 @@
               </p>
             </div>
             <button
-              class="btn cta complete"
+              class="btn cta complete jello-horizontal"
               data-bs-toggle="modal"
               data-bs-target="#SubscribeModal"
             >
@@ -557,18 +562,21 @@
       <!-- start footer -->
       <footer class="d-flex flex-column flex-md-row align-items-center">
         <!-- logo -->
-        <a href="../home.html">
-          <img
-            class="d-none d-lg-flex"
-            src="../images/Footer Logo.png"
-            alt=""
-          />
-          <img
-            class="d-flex d-lg-none"
-            src="../images/Footer Logo tablet&mobile.png"
-            alt=""
-          />
-        </a>
+        <a class="navbar-brand" href="../home.html"
+          ><picture>
+            <source
+              media="(min-width: 992px)"
+              srcset="../images/Footer Logo.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="../images/Footer Logo tablet&mobile.svg"
+            />
+            <img
+              src="../images/Footer Logo tablet&mobile.svg"
+              alt="Our commitment"
+            /> </picture
+        ></a>
 
         <!-- navigation -->
         <div
@@ -636,5 +644,6 @@
       </footer>
       <!-- start footer -->
     </div>
+    <script src="../js/shared.js"></script>
   </body>
 </html>
